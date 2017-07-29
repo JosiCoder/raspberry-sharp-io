@@ -83,7 +83,7 @@ namespace Test.Gpio.Chaser
                                      });
 
             // Create connection
-            var settings = new GpioConnectionSettings {Driver = driver};
+            var settings = new GpioConnectionSettings (driver);
 
             using (var connection = new GpioConnection(settings, leds))
             {

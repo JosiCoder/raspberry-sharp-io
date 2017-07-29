@@ -27,13 +27,22 @@ namespace Raspberry.IO.GeneralPurpose
         /// <summary>
         /// Initializes a new instance of the <see cref="GpioConnectionSettings"/> class.
         /// </summary>
-        public GpioConnectionSettings()
+        /// <param name="driver">The driver to use.</param>
+        public GpioConnectionSettings(IGpioConnectionDriver driver)
         {
-            Driver = DefaultDriver;
+            Driver = driver;
             BlinkDuration = DefaultBlinkDuration;
             PollInterval = DefaultPollInterval;
             Opened = true;
         }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GpioConnectionSettings"/> class
+        /// using the configured or default driver.
+        /// </summary>
+        public GpioConnectionSettings()
+            : this(DefaultDriver)
+        {}
 
         #endregion
         
