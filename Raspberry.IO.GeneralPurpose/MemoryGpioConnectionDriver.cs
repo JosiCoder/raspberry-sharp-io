@@ -247,8 +247,10 @@ namespace Raspberry.IO.GeneralPurpose
         {
             switch (processor)
             {
-                case Processor.Bcm2835:
-                case Processor.Bcm2708:
+				// Bcm2835 not supported
+                //case Processor.Bcm2835:
+
+				case Processor.Bcm2708:
                     return Interop.BCM2835_GPIO_BASE;
 
                 case Processor.Bcm2709:
