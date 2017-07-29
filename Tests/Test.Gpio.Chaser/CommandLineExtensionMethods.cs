@@ -49,14 +49,12 @@ namespace Test.Gpio.Chaser
         {
             switch (driverName)
             {
-                case "default":
-                    return new GpioConnectionDriver();
                 case "memory":
                     return new MemoryGpioConnectionDriver();
                 case "file":
                     return new FileGpioConnectionDriver();
                 case "":
-                    return null;
+					return new GpioConnectionDriver();
 
                 default:
                     throw new ArgumentOutOfRangeException("driverName", driverName,
