@@ -30,10 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Raspberry.System, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)packages\Raspberry.System.2.1\lib\net40\Raspberry.System.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Configuration" />
@@ -46,6 +42,9 @@
     <Reference Include="UnitsNet, Version=3.46.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>$(SolutionDir)packages\UnitsNet.3.46.1\lib\net35\UnitsNet.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="Raspberry.System">
+      <HintPath>..\packages\Raspberry.System.3B.2.1.1\lib\net40\Raspberry.System.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
